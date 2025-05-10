@@ -56,7 +56,7 @@ namespace Dominio
 
         public override string ToString()
         {
-            return $"\nID:{this._id}\nNombre:{this._pasajero.GetNombre()}\nPrecio:{this._precio}\nFecha:{this._date.ToShortDateString()}\nNro. Vuelo:{this._vuelo.GetNroVuelo()}\n";
+            return $"\nID:{this._id}\nNombre:{this._pasajero.GetNombre()}\nPrecio:{Math.Round(this._precio,2)}\nFecha:{this._date.ToShortDateString()}\nNro. Vuelo:{this._vuelo.GetNroVuelo()}\n";
         }
     }
 }

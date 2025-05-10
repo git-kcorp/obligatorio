@@ -19,7 +19,6 @@ namespace Dominio
         private Sistema() { }
 
         private List<Administrador> _administradores = new List<Administrador>();
-
         private List<Cliente> _clientes = new List<Cliente>();
         private List<Avion> _aviones = new List<Avion>();
         private List<Aeropuerto> _aeropuertos = new List<Aeropuerto>();
@@ -27,8 +26,26 @@ namespace Dominio
         private List<Vuelo> _vuelos = new List<Vuelo>();
         private List<Pasaje> _pasajes = new List<Pasaje>();
 
-        
 
+
+        public Ocacional createClienteOcacional(string mail,string user,string password,int ci,string nombre,string nacionalidad)
+        {
+            Random rnd = new Random();
+            bool random = rnd.Next(0, 2) == 1;
+            Ocacional cli = new Ocacional(mail, user, password, ci, nombre, nacionalidad,random);
+            _clientes.Add(cli);
+            return cli;
+        }
+
+
+        public Premium createClientePremium(string mail, string user, string password, int ci, string nombre, string nacionalidad)
+        {
+            Random rnd = new Random();
+            bool random = rnd.Next(0, 2) == 1;
+            Premium cli = new Premium(mail, user, password, ci, nombre, nacionalidad);
+            _clientes.Add(cli);
+            return cli;
+        }
 
         public List<Vuelo> getAllVuelos()
         {
@@ -142,38 +159,42 @@ namespace Dominio
             this._administradores.Add(adm);
         }
 
-        public void createCliente(string mail,string user,string password, int ci, string nombre, string nacionalidad,TipoCliente tipoCliente)
+        public void createCliente(string mail,string user,string password, int ci, string nombre, string nacionalidad)
         {
-            Cliente cli = new Cliente(mail,user,password,ci,nombre,nacionalidad,tipoCliente);
+            Cliente cli = new Cliente(mail,user,password,ci,nombre,nacionalidad);
             _clientes.Add(cli);
         }
 
-        public void createAvion(string fabricante, string modelo, int cantAsientos, decimal alcanceKm, decimal costoKm)
+        public Avion createAvion(string fabricante, string modelo, int cantAsientos, decimal alcanceKm, decimal costoKm)
         {
             Avion av = new Avion(fabricante,modelo,cantAsientos,alcanceKm,costoKm);
             _aviones.Add(av);
+            return av;
         }
 
-        public void createAeropuerto(string iata, string ciudad, decimal costoOperacion, decimal costoTasa)
+        public Aeropuerto createAeropuerto(string iata, string ciudad, decimal costoOperacion, decimal costoTasa)
         {
             Aeropuerto aeropuerto = new Aeropuerto(iata,ciudad,costoOperacion,costoTasa);
             _aeropuertos.Add(aeropuerto);
+            return aeropuerto;
         }
 
-        public void createRuta(Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoEntrada, decimal distancia)
+        public Ruta createRuta(Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoEntrada, decimal distancia)
         {
             Ruta ruta = new Ruta(aeropuertoSalida,aeropuertoEntrada,distancia);
             _rutas.Add(ruta);
+            return ruta;
         }
 
-        public void createVuelo(string numeroVuelo, Ruta ruta, Avion avion, List<FrecuenciaVuelo> frecuencia)
+        public Vuelo createVuelo(string numeroVuelo, Ruta ruta, Avion avion, List<FrecuenciaVuelo> frecuencia)
         {
             Vuelo vuelo = new Vuelo(numeroVuelo, ruta, avion, frecuencia);
             _vuelos.Add(vuelo);
+            return vuelo;
 
         }
 
-        public void createPasaje(Vuelo vuelo, DateTime date, Cliente pasajero, Equipaje equipaje)
+        public Pasaje createPasaje(Vuelo vuelo, DateTime date, Cliente pasajero, Equipaje equipaje)
         {
             decimal precioAsiento = getPrecioAsiento(vuelo);
             decimal costo = precioAsiento + precioAsiento * 0.25m;
@@ -182,11 +203,11 @@ namespace Dominio
                 costo = costo + costo * 0.10m;
             }else if(equipaje == Equipaje.BODEGA)
             {
-                if(pasajero.GetTipoCliente() == TipoCliente.premium)
+                if (pasajero is Premium)
                 {
                     costo = costo + costo * 0.05m;
                 }
-                else
+                else if (pasajero is Ocacional)
                 {
                     costo = costo + costo * 0.20m;
                 }
@@ -199,6 +220,7 @@ namespace Dominio
 
             Pasaje pasaje = new Pasaje(vuelo, date, pasajero, equipaje, costo);
             _pasajes.Add(pasaje);
+            return pasaje;
         }
 
         public Pasaje getPasaje(int id)

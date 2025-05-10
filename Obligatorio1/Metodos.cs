@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio;
@@ -65,7 +66,7 @@ namespace Obligatorio1
         {
             foreach (var item in system.getAllClientes())
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine($"{item.ToString()}\n");
             }
             Console.ReadKey();
             Console.Clear();
@@ -73,25 +74,49 @@ namespace Obligatorio1
 
         public static void altaCliente(Sistema system)
         {
-            Console.WriteLine("Ingrese el mail del cliente");
-            string mail = Console.ReadLine();
-            Console.WriteLine("Ingrese el usuario del cliente");
-            string user = Console.ReadLine();
-            Console.WriteLine("Ingrese la password del cliente");
-            string password = Console.ReadLine();
-            Console.WriteLine("Ingrese el documento del cliente");
-            int ci = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Ingrese el nombre del cliente");
-            string nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese la nacionalidad del cliente");
-            string nacionalidad = Console.ReadLine();
-            Console.WriteLine("Ingrese el tipo de cliente a registrar\n1-Ocacional\n2-Premium");
-            int tipoCliente = Int32.Parse(Console.ReadLine());
-            system.createCliente(mail, user, password, ci, nombre, nacionalidad, tipoCliente == 1 ? TipoCliente.ocasional : TipoCliente.ocasional);
+            try
+            {
+                Console.WriteLine("Ingrese el mail del cliente");
+                string mail = Console.ReadLine();
+                Console.WriteLine("Ingrese el usuario del cliente");
+                string user = Console.ReadLine();
+                Console.WriteLine("Ingrese la password del cliente");
+                string password = Console.ReadLine();
+                Console.WriteLine("Ingrese el documento del cliente");
+                int ci = 0;
+                try
+                {
+                    ci = Int32.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    new Exception("Ingrese datos validos");
+                }
+                Console.WriteLine("Ingrese el nombre del cliente");
+                string nombre = Console.ReadLine();
+                Console.WriteLine("Ingrese la nacionalidad del cliente");
+                string nacionalidad = Console.ReadLine();
+                Cliente cli = new Cliente(mail, user, password, ci, nombre, nacionalidad);
+                if (!checkClient(cli))
+                    system.createClienteOcacional(mail, user, password, ci, nombre, nacionalidad);
+                Console.Clear();
+                Console.WriteLine("Se ha creado satisfactoriamente el cliente!");
+                Console.ReadKey();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
 
-            Console.Clear();
-            Console.WriteLine("Se ha creado satisfactoriamente el cliente!");
-            Console.ReadKey();
+        private static bool checkClient(Cliente clie)
+        {
+            if (String.IsNullOrEmpty(clie.Mail)) new Exception("Ningun mail fue introducido");
+            if (String.IsNullOrEmpty(clie.Nombre)) new Exception("Ningun nombre fue introducido");
+            if (String.IsNullOrEmpty(clie.Nacionalidad)) new Exception("Ninguna nacionalidad fue introducida");
+            if (String.IsNullOrEmpty(clie.User)) new Exception("Ningun User fue introducido");
+            if (String.IsNullOrEmpty(clie.Password)) new Exception("Ninguna contraseña fue introducida");
+            return true;
         }
 
         public static void getAllVuelosPorCodigoAeropuerto(Sistema system)

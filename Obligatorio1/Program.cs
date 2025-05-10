@@ -34,10 +34,7 @@ namespace Obligatorio1
                         {
                             Console.WriteLine("3-Clientes");
                             Console.WriteLine("4-Aeropuertos");
-                            Console.WriteLine("5-Aviones");
                             Console.WriteLine("6-Pasajes");
-                            Console.WriteLine("7-Rutas");
-                            Console.WriteLine("8-Vuelos");
                         }
                         Console.WriteLine("99-Cerrar sesion");
                     }
@@ -58,19 +55,9 @@ namespace Obligatorio1
                         case 4:
                             Menus.menuAeropuerto(system);
                             break;
-                        case 5:
-                            Menus.menuAviones(system);
-                            break;
+
                         case 6:
                             Menus.menuPasajes(system);
-                            break;
-
-                        case 7:
-                            Menus.menuRutas(system);
-                            break;
-
-                        case 8:
-                            Menus.menuVuelos(system);
                             break;
                         case 99:
                             user_logged = 0;

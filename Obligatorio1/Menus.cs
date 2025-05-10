@@ -13,7 +13,7 @@ namespace Obligatorio1
         {
             Console.Clear();
             Console.WriteLine("1-Conseguir informacion de todos los clientes");
-            Console.WriteLine("2-Dar alta a un cliente");
+            Console.WriteLine("2-Dar alta a un cliente ocacional");
             int opt = Int32.Parse(Console.ReadLine());
 
             switch (opt)
@@ -31,22 +31,12 @@ namespace Obligatorio1
         {
             Console.Clear();
             Console.WriteLine("1-Conseguir todos los vuelos de un aeropuerto");
-            Console.WriteLine("2-Crear un aeropuerto");
-            Console.WriteLine("3-Listar Aeropuertos");
             int opt = Int32.Parse(Console.ReadLine());
 
             switch (opt)
             {
                 case 1:
                     Metodos.getAllVuelosPorCodigoAeropuerto(system);
-                    break;
-
-                case 2:
-                    Metodos.altaAeropuerto(system);
-                    break;
-
-                case 3:
-                    Metodos.getAllAeropuertos(system);
                     break;
             }
         }
@@ -101,7 +91,6 @@ namespace Obligatorio1
                     Metodos.altaRuta(system);
                 break;
             }
-
         }
         public static void menuVuelos(Sistema system)
         {
