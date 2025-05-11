@@ -36,6 +36,16 @@ namespace Dominio
             return getNombre();
         }
 
+        private string getNacionalidad()
+        {
+            return this._nacionalidad;
+        }
+
+        public string GetNacionalidad()
+        {
+            return getNacionalidad();
+        }
+
         public virtual string ToString()
         {
             return $"Nombre:{this._nombre}\nEmail:{this.Mail}\nNacionalidad:{this._nacionalidad}";

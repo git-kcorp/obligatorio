@@ -97,9 +97,9 @@ namespace Obligatorio1
                 Console.WriteLine("Ingrese la nacionalidad del cliente");
                 string nacionalidad = Console.ReadLine();
                 Cliente cli = new Cliente(mail, user, password, ci, nombre, nacionalidad);
-                if (!checkClient(cli))
-                    system.createClienteOcacional(mail, user, password, ci, nombre, nacionalidad);
+                Cliente createdCli = system.createClienteOcacional(mail, user, password, ci, nombre, nacionalidad);
                 Console.Clear();
+                
                 Console.WriteLine("Se ha creado satisfactoriamente el cliente!");
                 Console.ReadKey();
             }
@@ -109,15 +109,7 @@ namespace Obligatorio1
             }
         }
 
-        private static bool checkClient(Cliente clie)
-        {
-            if (String.IsNullOrEmpty(clie.Mail)) new Exception("Ningun mail fue introducido");
-            if (String.IsNullOrEmpty(clie.Nombre)) new Exception("Ningun nombre fue introducido");
-            if (String.IsNullOrEmpty(clie.Nacionalidad)) new Exception("Ninguna nacionalidad fue introducida");
-            if (String.IsNullOrEmpty(clie.User)) new Exception("Ningun User fue introducido");
-            if (String.IsNullOrEmpty(clie.Password)) new Exception("Ninguna contraseña fue introducida");
-            return true;
-        }
+
 
         public static void getAllVuelosPorCodigoAeropuerto(Sistema system)
         {

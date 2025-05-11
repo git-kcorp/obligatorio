@@ -26,17 +26,28 @@ namespace Dominio
         private List<Vuelo> _vuelos = new List<Vuelo>();
         private List<Pasaje> _pasajes = new List<Pasaje>();
 
-
-
-        public Ocacional createClienteOcacional(string mail,string user,string password,int ci,string nombre,string nacionalidad)
+        public Ocacional createClienteOcacional(string mail, string user, string password, int ci, string nombre, string nacionalidad)
         {
+
             Random rnd = new Random();
             bool random = rnd.Next(0, 2) == 1;
-            Ocacional cli = new Ocacional(mail, user, password, ci, nombre, nacionalidad,random);
-            _clientes.Add(cli);
+            Ocacional cli = new Ocacional(mail, user, password, ci, nombre, nacionalidad, random);
+            if (checkClient(cli))
+            {
+                _clientes.Add(cli);
+            }
             return cli;
         }
-
+        
+        private static bool checkClient(Cliente clie)
+        {
+            if (String.IsNullOrEmpty(clie.GetMail()))throw new Exception("Ningun mail fue introducido");
+            if (String.IsNullOrEmpty(clie.GetNombre()))throw new Exception("Ningun nombre fue introducido");
+            if (String.IsNullOrEmpty(clie.GetNacionalidad()))throw new Exception("Ninguna nacionalidad fue introducida");
+            if (String.IsNullOrEmpty(clie.GetUser()))throw new Exception("Ningun User fue introducido");
+            if (String.IsNullOrEmpty(clie.GetPassword()))throw new Exception("Ninguna contraseña fue introducida");
+            return true;
+        }
 
         public Premium createClientePremium(string mail, string user, string password, int ci, string nombre, string nacionalidad)
         {
