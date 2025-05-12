@@ -6,6 +6,7 @@ namespace Dominio
 {
     public class Administrador : Usuario
     {
+        //hecho uml
         private string _apodo;
 
         public string Apodo {

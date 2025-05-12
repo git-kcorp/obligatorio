@@ -6,6 +6,7 @@ namespace Dominio
 {
     public class LoginResult
     {
+        //UML CREADO
         private int _id;
         private bool _tipoUsuario;
 

@@ -26,3 +26,13 @@ C:\Users\peluf\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.cspr
 C:\Users\peluf\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.sourcelink.json
 C:\Users\peluf\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.dll
 C:\Users\peluf\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.pdb
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\bin\Debug\netstandard2.1\Dominio.deps.json
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\bin\Debug\netstandard2.1\Dominio.dll
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\bin\Debug\netstandard2.1\Dominio.pdb
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.AssemblyInfo.cs
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.sourcelink.json
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.dll
+C:\Users\Joaco\Desktop\ProyectoORT\Dominio\obj\Debug\netstandard2.1\Dominio.pdb

@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\peluf\\Desktop\\ProyectoORT\\",
+  "WorkspaceRootPath": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F6E55D6-F863-4C6B-99C7-DA8017FF6CAC}|Dominio\\Dominio.csproj|c:\\users\\peluf\\desktop\\proyectoort\\dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A13CCF67-98EF-4897-8A44-DD5BABF2ACB6}|Obligatorio1\\Obligatorio1.csproj|c:\\users\\joaco\\desktop\\proyectoort\\obligatorio1\\crearejemplos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A13CCF67-98EF-4897-8A44-DD5BABF2ACB6}|Obligatorio1\\Obligatorio1.csproj|solutionrelative:obligatorio1\\crearejemplos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F6E55D6-F863-4C6B-99C7-DA8017FF6CAC}|Dominio\\Dominio.csproj|c:\\users\\joaco\\desktop\\proyectoort\\dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F6E55D6-F863-4C6B-99C7-DA8017FF6CAC}|Dominio\\Dominio.csproj|solutionrelative:dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A13CCF67-98EF-4897-8A44-DD5BABF2ACB6}|Obligatorio1\\Obligatorio1.csproj|c:\\users\\joaco\\desktop\\proyectoort\\obligatorio1\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A13CCF67-98EF-4897-8A44-DD5BABF2ACB6}|Obligatorio1\\Obligatorio1.csproj|solutionrelative:obligatorio1\\metodos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F6E55D6-F863-4C6B-99C7-DA8017FF6CAC}|Dominio\\Dominio.csproj|c:\\users\\joaco\\desktop\\proyectoort\\dominio\\ocacional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F6E55D6-F863-4C6B-99C7-DA8017FF6CAC}|Dominio\\Dominio.csproj|solutionrelative:dominio\\ocacional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A13CCF67-98EF-4897-8A44-DD5BABF2ACB6}|Obligatorio1\\Obligatorio1.csproj|c:\\users\\joaco\\desktop\\proyectoort\\obligatorio1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A13CCF67-98EF-4897-8A44-DD5BABF2ACB6}|Obligatorio1\\Obligatorio1.csproj|solutionrelative:obligatorio1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +35,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Sistema.cs",
-              "DocumentMoniker": "C:\\Users\\peluf\\Desktop\\ProyectoORT\\Dominio\\Sistema.cs",
-              "RelativeDocumentMoniker": "Dominio\\Sistema.cs",
-              "ToolTip": "C:\\Users\\peluf\\Desktop\\ProyectoORT\\Dominio\\Sistema.cs",
-              "RelativeToolTip": "Dominio\\Sistema.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAIA8wGIAAAAsAAAAAAAAAA==",
+              "Title": "CrearEjemplos.cs",
+              "DocumentMoniker": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Obligatorio1\\CrearEjemplos.cs",
+              "RelativeDocumentMoniker": "Obligatorio1\\CrearEjemplos.cs",
+              "ToolTip": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Obligatorio1\\CrearEjemplos.cs",
+              "RelativeToolTip": "Obligatorio1\\CrearEjemplos.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T22:54:11.849Z",
+              "WhenOpened": "2025-05-12T14:02:51.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Ocacional.cs",
+              "DocumentMoniker": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Dominio\\Ocacional.cs",
+              "RelativeDocumentMoniker": "Dominio\\Ocacional.cs",
+              "ToolTip": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Dominio\\Ocacional.cs",
+              "RelativeToolTip": "Dominio\\Ocacional.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T13:59:50.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Metodos.cs",
+              "DocumentMoniker": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Obligatorio1\\Metodos.cs",
+              "RelativeDocumentMoniker": "Obligatorio1\\Metodos.cs",
+              "ToolTip": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Obligatorio1\\Metodos.cs",
+              "RelativeToolTip": "Obligatorio1\\Metodos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T13:57:03.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Sistema.cs",
+              "DocumentMoniker": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Dominio\\Sistema.cs",
+              "RelativeDocumentMoniker": "Dominio\\Sistema.cs",
+              "ToolTip": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Dominio\\Sistema.cs",
+              "RelativeToolTip": "Dominio\\Sistema.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwC4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T13:56:06.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Obligatorio1\\Program.cs",
+              "RelativeDocumentMoniker": "Obligatorio1\\Program.cs",
+              "ToolTip": "C:\\Users\\Joaco\\Desktop\\ProyectoORT\\Obligatorio1\\Program.cs",
+              "RelativeToolTip": "Obligatorio1\\Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T13:55:30.469Z",
               "EditorCaption": ""
             }
           ]

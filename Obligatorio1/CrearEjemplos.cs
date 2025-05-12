@@ -21,7 +21,7 @@ namespace Obligatorio1
             Cliente pasajero4 = system.createClienteOcacional("lucia@mail.com", "lucy", "qwerty", 45511222, "Lucia", "Paraguaya");
             Cliente pasajero5 = system.createClienteOcacional("diego@mail.com", "dieguito", "zxcv", 44112233, "Diego", "Boliviano");
             //CREA PREMIUM
-            Cliente pasajero6 = system.createClientePremium("estimail@premium.com", "esti", "pass", 1233212, "Esteban", "Argentino");
+            Cliente pasajero6 = system.createClientePremium("estimail@premium.com", "esti", "pass", 12332126, "Esteban", "Argentino");
             Cliente pasajero7 = system.createClientePremium("ana@mail.com", "anita", "anapass", 99887766, "Ana", "Uruguaya");
             Cliente pasajero8 = system.createClientePremium("jose@mail.com", "jose", "josito", 11223344, "Jose", "Peruano");
             Cliente pasajero9 = system.createClientePremium("carla@mail.com", "carli", "car123", 55667788, "Carla", "Venezolana");
@@ -47,7 +47,6 @@ namespace Obligatorio1
             Aeropuerto aeropuertoCHN = system.createAeropuerto("CHN", "Pekín", 155, 28);
             Aeropuerto aeropuertoAUS = system.createAeropuerto("AUS", "Sídney", 145, 20);
             Aeropuerto aeropuertoIND = system.createAeropuerto("IND", "Nueva Delhi", 130, 19);
-
             //creacion de ruta
             Ruta rutaUyuArg = system.createRuta(aeropuertoUYU, aeropuertoARG, 1000);
             Ruta rutaUyuBra = system.createRuta(aeropuertoUYU, aeropuertoBRA, 1800);

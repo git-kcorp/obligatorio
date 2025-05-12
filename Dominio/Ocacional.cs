@@ -6,14 +6,19 @@ namespace Dominio
 {
     public class Ocacional : Cliente
     {
+        //hecho UML
         private bool _elegible = false;
 
         public bool Elegible { get; set; }
+        Random rnd = new Random();
 
 
-        public Ocacional(string mail, string user, string password, int ci, string nombre, string nacionalidad, bool elegible) : base(mail, user, password, ci, nombre, nacionalidad)
+
+
+        public Ocacional(string mail, string user, string password, int ci, string nombre, string nacionalidad) : base(mail, user, password, ci, nombre, nacionalidad)
         {
-            this._elegible = elegible;
+            bool random = rnd.Next(0, 2) == 1;
+            this._elegible = random;
         }
         public Ocacional() { }
 

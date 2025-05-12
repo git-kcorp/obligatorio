@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Dominio
 {
+    //UML CREADO
     public enum Equipaje
     {
         LIGHT, 

@@ -6,6 +6,7 @@ namespace Dominio
 {
     public class Avion
     {
+        //UML hecho
         private static int _nextId = 1;
 
         private int _id;

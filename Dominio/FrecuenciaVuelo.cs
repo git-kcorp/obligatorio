@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Dominio
 {
+    //uml creado
     public enum FrecuenciaVuelo
     {
         Lunes,

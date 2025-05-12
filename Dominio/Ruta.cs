@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    //    Las rutas que cubre la aerolínea son entre aeropuertos conocidos.De las rutas se conoce su id autoincremental,
-    //aeropuerto de salida, aeropuerto de llegada y distancia.De los aeropuertos se conoce su código IATA
-    //(identificador único de 3 letras), ciudad, costo de operación y costo de las tasas.
+
     public class Ruta
     {
+        //UML CREADO
         private static int _idNext=1;
 
         private int _id;

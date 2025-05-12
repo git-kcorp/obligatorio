@@ -6,6 +6,7 @@ namespace Dominio
 {
     public class Sistema
     {
+        //UML HECHO
         private static Sistema _instancia;
 
         public static Sistema Instancia
@@ -28,33 +29,38 @@ namespace Dominio
 
         public Ocacional createClienteOcacional(string mail, string user, string password, int ci, string nombre, string nacionalidad)
         {
-
-            Random rnd = new Random();
-            bool random = rnd.Next(0, 2) == 1;
-            Ocacional cli = new Ocacional(mail, user, password, ci, nombre, nacionalidad, random);
-            if (checkClient(cli))
+            Ocacional cli = new Ocacional(mail, user, password, ci, nombre, nacionalidad);
+            if (checkClient(cli,_clientes))
             {
                 _clientes.Add(cli);
             }
             return cli;
         }
-        
-        private static bool checkClient(Cliente clie)
+
+        private static bool checkClient(Cliente clie, List<Cliente> clientes)
         {
-            if (String.IsNullOrEmpty(clie.GetMail()))throw new Exception("Ningun mail fue introducido");
-            if (String.IsNullOrEmpty(clie.GetNombre()))throw new Exception("Ningun nombre fue introducido");
-            if (String.IsNullOrEmpty(clie.GetNacionalidad()))throw new Exception("Ninguna nacionalidad fue introducida");
-            if (String.IsNullOrEmpty(clie.GetUser()))throw new Exception("Ningun User fue introducido");
-            if (String.IsNullOrEmpty(clie.GetPassword()))throw new Exception("Ninguna contraseña fue introducida");
+            foreach (Cliente cl in clientes)
+            {
+                if (cl.GetCi() == clie.GetCi()) throw new Exception("La cedula ya esta registrada.");
+                if (cl.GetMail() == clie.GetMail()) throw new Exception("El mail ya esta registrado");
+            }
+            if (clie.GetCi().ToString().Length != 8) throw new Exception("La cantidad de caracteres en la cedula debe de ser 8.");
+            if (String.IsNullOrEmpty(clie.GetMail())) throw new Exception("Ningun mail fue introducido");
+            if (!clie.GetMail().Contains("@")) throw new Exception("El mail debe contener un arroba");
+            if (String.IsNullOrEmpty(clie.GetNombre())) throw new Exception("Ningun nombre fue introducido");
+            if (String.IsNullOrEmpty(clie.GetNacionalidad())) throw new Exception("Ninguna nacionalidad fue introducida");
+            if (String.IsNullOrEmpty(clie.GetUser())) throw new Exception("Ningun User fue introducido");
+            if (String.IsNullOrEmpty(clie.GetPassword())) throw new Exception("Ninguna contraseña fue introducida");
             return true;
         }
 
         public Premium createClientePremium(string mail, string user, string password, int ci, string nombre, string nacionalidad)
         {
-            Random rnd = new Random();
-            bool random = rnd.Next(0, 2) == 1;
             Premium cli = new Premium(mail, user, password, ci, nombre, nacionalidad);
-            _clientes.Add(cli);
+            if (checkClient(cli, _clientes))
+            {
+                _clientes.Add(cli);
+            }
             return cli;
         }
 
@@ -147,11 +153,11 @@ namespace Dominio
             List<Vuelo> vuelosNew = new List<Vuelo>();
             foreach (Vuelo vuelo in _vuelos)
             {
-                if(vuelo.GetRuta().GetAeropuertoE().GetCodigo() == codigo)
+                if(vuelo.GetRuta().GetAeropuertoE().GetCodigo().ToLower() == codigo.ToLower())
                 {
                     vuelosNew.Add(vuelo);
                 }
-                if(vuelo.GetRuta().GetAeropuertoS().GetCodigo() == codigo)
+                if(vuelo.GetRuta().GetAeropuertoS().GetCodigo().ToLower() == codigo.ToLower())
                 {
                     vuelosNew.Add(vuelo);
                 }

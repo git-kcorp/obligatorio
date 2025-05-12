@@ -46,10 +46,29 @@ namespace Obligatorio1
 
         public static void listarPasajesEntreFechas(Sistema system)
         {
+            DateTime fecha1;
+            DateTime fecha2;
             Console.WriteLine("Ingrese la primera fecha");
-            DateTime fecha1 = DateTime.Parse(Console.ReadLine());
+            try
+            {
+                fecha1 = DateTime.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                throw new Exception("La fecha ingresada es invalida");
+            }
+            if (fecha1 == null) throw new Exception("La fecha no es valida");
             Console.WriteLine("Ingrese la segunda fecha");
-            DateTime fecha2 = DateTime.Parse(Console.ReadLine());
+            try
+            {
+                fecha2 = DateTime.Parse(Console.ReadLine());
+
+            }
+            catch
+            {
+                throw new Exception("La fecha infresada es invalida");
+            }
+            if (fecha2 == null) throw new Exception("La fecha no es valida");
             List<Pasaje> newLista = system.listarPasajesEntreFechas(fecha1, fecha2);
             Console.Clear();
             Console.WriteLine("Pasajes entre fechas\n");
@@ -78,10 +97,13 @@ namespace Obligatorio1
             {
                 Console.WriteLine("Ingrese el mail del cliente");
                 string mail = Console.ReadLine();
+                if (String.IsNullOrEmpty(mail)) throw new Exception("No se ingreso un mail");
                 Console.WriteLine("Ingrese el usuario del cliente");
                 string user = Console.ReadLine();
+                if (String.IsNullOrEmpty(user)) throw new Exception("No se ingreso un usuario");
                 Console.WriteLine("Ingrese la password del cliente");
                 string password = Console.ReadLine();
+                if (String.IsNullOrEmpty(password)) throw new Exception("No se ingreso una contraseña");
                 Console.WriteLine("Ingrese el documento del cliente");
                 int ci = 0;
                 try
@@ -94,12 +116,12 @@ namespace Obligatorio1
                 }
                 Console.WriteLine("Ingrese el nombre del cliente");
                 string nombre = Console.ReadLine();
+                if (String.IsNullOrEmpty(nombre)) throw new Exception("No se ingreso una conrtaseña");
                 Console.WriteLine("Ingrese la nacionalidad del cliente");
                 string nacionalidad = Console.ReadLine();
-                Cliente cli = new Cliente(mail, user, password, ci, nombre, nacionalidad);
+                if (String.IsNullOrEmpty(nacionalidad)) throw new Exception("No se ingreso una conrtaseña");
                 Cliente createdCli = system.createClienteOcacional(mail, user, password, ci, nombre, nacionalidad);
                 Console.Clear();
-                
                 Console.WriteLine("Se ha creado satisfactoriamente el cliente!");
                 Console.ReadKey();
             }
@@ -115,6 +137,7 @@ namespace Obligatorio1
         {
             Console.WriteLine("Ingrese el codigo IATA");
             string IATA = Console.ReadLine();
+            if (String.IsNullOrEmpty(IATA)) throw new Exception("No ingreso el codigo IATA");
             foreach (var item in system.getAllVuelosPorCodigoAeropuerto(IATA))
             {
                 Console.WriteLine(item.ToString());

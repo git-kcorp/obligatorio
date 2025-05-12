@@ -7,6 +7,7 @@ namespace Dominio
 {
     public class Aeropuerto
     {
+        //UML HECHO
         private static int _nextId = 1;
         private int _id;
         private string _iata;

@@ -8,6 +8,7 @@ namespace Dominio
 {
     public class Pasaje
     {
+        //UML CREADO
         private static int _nextId=1;
         private int _id;
         private Vuelo _vuelo;
